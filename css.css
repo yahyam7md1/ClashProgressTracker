@@ -1,0 +1,215 @@
+section {
+    padding: 60px 0;
+    position: relative;
+}
+#intro {
+  background: none; /* Remove the background image here */
+  height: 100vh;
+  color: white;
+  display: block; /* Change from flex to block */
+  position: relative;
+  z-index: 1;
+  padding-right: 0;
+}
+
+.carousel-inner img {
+  height: 100vh; /* Ensure carousel images cover the full height */
+  object-fit: cover; /* This makes sure images cover the area properly */
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1; /* Lower than content */
+}
+
+.carousel-item {
+  position: relative;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 20px;
+  left: 15%;
+  z-index: 3; /* Higher than the overlay */
+}
+  #intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+h1, .lead {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.display-2 {
+    color: #ffffff;
+}
+.display-5 {
+    color: #e9ecef;
+}
+.lead {
+    color: #f8f9fa;
+}
+.btn-dark {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+}
+
+
+body {
+    background: #28313b;
+    background: linear-gradient(to right, #27282a, #020202);
+    margin: 0;
+    padding: 0;
+}
+  
+  .bg-image {
+    background-image: url('contactus.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+  }
+
+
+
+  .paddingTB60 {padding:60px 0px 60px 0px;}
+.gray-bg {background: #F1F1F1 !important;}
+.about-title {}
+.about-title h1 {color: #535353; font-size:45px;font-weight:600;}
+.about-title span {color: #315cdd; font-size:45px;font-weight:700;}
+.about-title h3 {color: #535353; font-size:23px;margin-bottom:24px;}
+.about-title p {color: #7a7a7a;line-height: 1.8;margin: 0 0 15px;}
+.about-paddingB {padding-bottom: 12px;}
+.about-img {padding-left: 57px;}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.carousel {
+    margin-top: 0;
+}
+
+/* Remove margin and padding between navbar and carousel */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* Added for smooth scrolling */
+}
+
+.navbar {
+    margin-bottom: 0 !important; /* Use !important to override any other styles */
+    padding: 0;
+    width: 100%;
+}
+
+.carousel {
+    margin-top: 0 !important; /* Use !important to override any other styles */
+}
+
+/* Additional reset for any padding or margin that might affect layout */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#spinner {
+    display: none; /* Ensure spinner is hidden initially */
+}
+
+/* Adjust the general button styles */
+.custom-btn {
+  width: auto; /* Adjust width as needed or set to auto */
+  height: auto; /* Adjust height as needed or set to auto */
+  padding: 10px 25px; /* Adjust padding to match the original button size */
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  border-radius: 5px;
+  color: #fff; /* Ensure text color is white */
+  box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+              7px 7px 20px 0px rgba(0,0,0,.1),
+              4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+/* Specific styles for button 3 */
+.btn-3 {
+  background: rgb(0,172,238);
+  background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  border: none;
+}
+
+.btn-3:hover {
+  background: rgba(2,126,251,0.8); /* Lighten background on hover */
+  box-shadow: 0px 0px 8px rgba(2,126,251,0.8); /* Add a glow effect */
+}
+
+.btn-3 span {
+  position: relative;
+  z-index: 10; /* Ensure text stays above the background */
+}
+
+.btn-3:hover span {
+  color: #fff; /* Keep text color white on hover */
+}
+
+.card {
+    transition: transform 0.3s ease-in-out; /* Smooth transition for transform property */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Increase the size of the card by 5% on hover */
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Keyframes for slide-up effect */
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Applying animations to elements */
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.slide-up {
+    animation: slideUp 1s ease-out forwards;
+}
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
